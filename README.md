@@ -1,14 +1,17 @@
-# 1. electron-quick-start-typscript
+# 1. electron-quick-start-typescript
 
+Forked from https://github.com/electron/electron-quick-start-typescript
 
 <!-- TOC -->
 
-- [1. electron-quick-start-typscript](#1-electron-quick-start-typscript)
+- [1. electron-quick-start-typescript](#1-electron-quick-start-typescript)
     - [1.1. To Use](#11-to-use)
     - [1.2. Re-compile automatically](#12-re-compile-automatically)
-    - [1.3. Debugging with VS Code](#13-debugging-with-vs-code)
-    - [1.4. Resources for Learning Electron](#14-resources-for-learning-electron)
-    - [1.5. License](#15-license)
+    - [1.3. Resources for Learning Electron](#13-resources-for-learning-electron)
+    - [1.4. License](#14-license)
+    - [1.5. VSCode Setup](#15-vscode-setup)
+        - [1.5.1. Debugging with VS Code](#151-debugging-with-vs-code)
+        - [1.5.2. Recommended VS Code Extensions](#152-recommended-vs-code-extensions)
 
 <!-- /TOC -->
 **Clone and run for a quick way to see Electron in action.**
@@ -50,7 +53,26 @@ To recompile automatically and to allow using [electron-reload](https://github.c
 npm run watch
 ```
 
-## 1.3. Debugging with VS Code
+
+
+## 1.3. Resources for Learning Electron
+
+- [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
+- [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
+- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
+- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
+- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
+- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+
+
+
+## 1.4. License
+
+[CC0 1.0 (Public Domain)](LICENSE.md)
+
+
+## 1.5. VSCode Setup
+### 1.5.1. Debugging with VS Code
 - Go to Debug tab and hit run.
 - In case the main javascript location is different, set it up in `.vscode/launch.json` as below
 
@@ -74,15 +96,13 @@ npm run watch
     ]
 ```
 
-## 1.4. Resources for Learning Electron
+### 1.5.2. Recommended VS Code Extensions
 
-- [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
-- [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+- [Javascript Standard Format](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standard-format)  
+    Usage: Command Pallette -> Format Document
+    
+- [Code Outline](https://marketplace.visualstudio.com/items?itemName=patrys.vscode-code-outline)  
+    Go to Explorer View, Code Outline shows up as below
+    ![CodeOutline]
 
-## 1.5. License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
+[CodeOutline]: Screenshots/CodeOutline.png
