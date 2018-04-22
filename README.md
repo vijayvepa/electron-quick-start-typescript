@@ -1,5 +1,16 @@
-# electron-quick-start-typscript
+# 1. electron-quick-start-typscript
 
+
+<!-- TOC -->
+
+- [1. electron-quick-start-typscript](#1-electron-quick-start-typscript)
+    - [1.1. To Use](#11-to-use)
+    - [1.2. Re-compile automatically](#12-re-compile-automatically)
+    - [1.3. Debugging with VS Code](#13-debugging-with-vs-code)
+    - [1.4. Resources for Learning Electron](#14-resources-for-learning-electron)
+    - [1.5. License](#15-license)
+
+<!-- /TOC -->
 **Clone and run for a quick way to see Electron in action.**
 
 This is a typescript port of the [Electron Quick Start repo](https://github.com/electron/electron-quick-start) -- a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
@@ -14,7 +25,7 @@ A basic Electron application needs just these files:
 
 You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
 
-## To Use
+## 1.1. To Use
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
@@ -31,7 +42,7 @@ npm start
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-## Re-compile automatically
+## 1.2. Re-compile automatically
 
 To recompile automatically and to allow using [electron-reload](https://github.com/yan-foto/electron-reload), run this in a separate terminal:
 
@@ -39,7 +50,31 @@ To recompile automatically and to allow using [electron-reload](https://github.c
 npm run watch
 ```
 
-## Resources for Learning Electron
+## 1.3. Debugging with VS Code
+- Go to Debug tab and hit run.
+- In case the main javascript location is different, set it up in `.vscode/launch.json` as below
+
+```json
+    "configurations": [
+      {
+        "name": "Debug Electron",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "tsc: build - tsconfig.json",
+        "outFiles": [
+                "${workspaceFolder}/dist/**/*.js"
+            ],
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+        "windows": {
+          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+        },
+        "args" : ["./dist/main.js"]  /// Change this value 
+      }
+    ]
+```
+
+## 1.4. Resources for Learning Electron
 
 - [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
 - [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
@@ -48,6 +83,6 @@ npm run watch
 - [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
 - [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
-## License
+## 1.5. License
 
 [CC0 1.0 (Public Domain)](LICENSE.md)
